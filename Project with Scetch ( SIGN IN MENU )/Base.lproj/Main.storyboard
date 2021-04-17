@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_with_Scetch___SIGN_IN_MENU__" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraund" translatesAutoresizingMaskIntoConstraints="NO" id="Myb-ad-y8c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuRegistration" translatesAutoresizingMaskIntoConstraints="NO" id="fkx-45-j2E">
+                                <rect key="frame" x="53" y="269" width="308" height="358"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="fdW-HC-VuP">
+                                <rect key="frame" x="90" y="305" width="234" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="eEC-gu-LyE"/>
+                                    <constraint firstAttribute="height" constant="149" id="rtf-tb-kmb"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="swift" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qjI-0H-hZ2" customClass="InserableTextField" customModule="Project_with_Scetch___SIGN_IN_MENU__" customModuleProvider="target">
+                                <rect key="frame" x="79" y="462" width="257" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="a2V-bB-aQ8"/>
+                                </constraints>
+                                <color key="textColor" red="0.18783398372885862" green="0.23210133109068173" blue="0.30984295685279184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME OR EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNC-Fx-Edj">
+                                <rect key="frame" x="83" y="465" width="105" height="13"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="8"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="feq-ic-nOL" customClass="InserableTextField" customModule="Project_with_Scetch___SIGN_IN_MENU__" customModuleProvider="target">
+                                <rect key="frame" x="79" y="516" width="257" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="1kk-ae-e8D"/>
+                                </constraints>
+                                <color key="textColor" red="0.18783398370000001" green="0.2321013311" blue="0.30984295690000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYs-mm-V37">
+                                <rect key="frame" x="83" y="520" width="105" height="13"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="8"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbP-C1-qvs">
+                                <rect key="frame" x="79" y="570" width="257" height="34"/>
+                                <color key="backgroundColor" red="0.13725490196078433" green="0.1803921568627451" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="894-dI-UPV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJB-ic-8Id">
+                                <rect key="frame" x="120" y="635" width="174" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="UXn-bT-tlW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                <state key="normal" title="REGISTER ">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JbP-C1-qvs" firstAttribute="top" secondItem="feq-ic-nOL" secondAttribute="bottom" constant="8" symbolic="YES" id="3U1-3x-6af"/>
+                            <constraint firstItem="PJB-ic-8Id" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="5Wj-Mf-yBd"/>
+                            <constraint firstItem="feq-ic-nOL" firstAttribute="top" secondItem="gYs-mm-V37" secondAttribute="bottom" constant="-17" id="6x9-TA-GLH"/>
+                            <constraint firstItem="kNC-Fx-Edj" firstAttribute="height" secondItem="qjI-0H-hZ2" secondAttribute="height" multiplier="0.282609" id="9h6-zP-2RM"/>
+                            <constraint firstItem="kNC-Fx-Edj" firstAttribute="width" secondItem="qjI-0H-hZ2" secondAttribute="width" multiplier="0.40856" id="BTT-lF-lTx"/>
+                            <constraint firstItem="qjI-0H-hZ2" firstAttribute="trailing" secondItem="Myb-ad-y8c" secondAttribute="trailing" constant="-78" id="Jep-Yk-Qe4"/>
+                            <constraint firstItem="feq-ic-nOL" firstAttribute="trailing" secondItem="Myb-ad-y8c" secondAttribute="trailing" constant="-78" id="M8l-5A-O6V"/>
+                            <constraint firstItem="gYs-mm-V37" firstAttribute="height" secondItem="feq-ic-nOL" secondAttribute="height" multiplier="0.282609" id="MLU-iz-ba2"/>
+                            <constraint firstItem="qjI-0H-hZ2" firstAttribute="leading" secondItem="kNC-Fx-Edj" secondAttribute="trailing" constant="-109" id="NMN-yP-m5C"/>
+                            <constraint firstItem="qjI-0H-hZ2" firstAttribute="top" secondItem="kNC-Fx-Edj" secondAttribute="bottom" constant="-16" id="U7c-za-893"/>
+                            <constraint firstItem="fdW-HC-VuP" firstAttribute="centerX" secondItem="fkx-45-j2E" secondAttribute="centerX" id="VMb-du-e4y"/>
+                            <constraint firstItem="qjI-0H-hZ2" firstAttribute="top" secondItem="fdW-HC-VuP" secondAttribute="bottom" constant="8" symbolic="YES" id="VfD-2q-agA"/>
+                            <constraint firstItem="gYs-mm-V37" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="Z7R-J1-Grb"/>
+                            <constraint firstItem="Myb-ad-y8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZIn-Ww-fJ4"/>
+                            <constraint firstItem="feq-ic-nOL" firstAttribute="leading" secondItem="gYs-mm-V37" secondAttribute="trailing" constant="-109" id="fZL-xe-pK0"/>
+                            <constraint firstItem="PJB-ic-8Id" firstAttribute="top" secondItem="fkx-45-j2E" secondAttribute="bottom" constant="8" symbolic="YES" id="gFZ-af-H6n"/>
+                            <constraint firstItem="Myb-ad-y8c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gIR-GP-d8T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PJB-ic-8Id" secondAttribute="trailing" constant="120" id="hLh-uU-PTh"/>
+                            <constraint firstItem="Myb-ad-y8c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hyO-yE-rbt"/>
+                            <constraint firstItem="feq-ic-nOL" firstAttribute="leading" secondItem="Myb-ad-y8c" secondAttribute="leading" constant="79" id="jKZ-lu-ShE"/>
+                            <constraint firstItem="JbP-C1-qvs" firstAttribute="leading" secondItem="Myb-ad-y8c" secondAttribute="leading" constant="79" id="jXV-Aj-KE7"/>
+                            <constraint firstItem="kNC-Fx-Edj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="l2y-jn-B20"/>
+                            <constraint firstItem="fkx-45-j2E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mJs-Js-Lga"/>
+                            <constraint firstItem="JbP-C1-qvs" firstAttribute="trailing" secondItem="Myb-ad-y8c" secondAttribute="trailing" constant="-78" id="nhw-Fm-dqk"/>
+                            <constraint firstItem="qjI-0H-hZ2" firstAttribute="leading" secondItem="Myb-ad-y8c" secondAttribute="leading" constant="79" id="q5k-pD-jUp"/>
+                            <constraint firstItem="gYs-mm-V37" firstAttribute="width" secondItem="feq-ic-nOL" secondAttribute="width" multiplier="0.40856" id="sAa-T6-qJq"/>
+                            <constraint firstItem="feq-ic-nOL" firstAttribute="top" secondItem="qjI-0H-hZ2" secondAttribute="bottom" constant="8" symbolic="YES" id="vSz-JH-g9I"/>
+                            <constraint firstAttribute="bottom" secondItem="Myb-ad-y8c" secondAttribute="bottom" id="wU2-e1-Ext"/>
+                            <constraint firstItem="fkx-45-j2E" firstAttribute="top" secondItem="fdW-HC-VuP" secondAttribute="bottom" constant="-185" id="z2n-GS-Ez8"/>
+                            <constraint firstItem="fkx-45-j2E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="z6F-JW-n9c"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgotPasswordButton" destination="PJB-ic-8Id" id="ygN-51-jOd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="89.732142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LOGO" width="231" height="192"/>
+        <image name="MenuRegistration" width="308" height="358"/>
+        <image name="backgraund" width="390" height="844"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

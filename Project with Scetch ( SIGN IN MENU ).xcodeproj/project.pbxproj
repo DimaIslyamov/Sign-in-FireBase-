@@ -13,6 +13,7 @@
 		53ED38FC25C5707100CA73B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53ED38FA25C5707100CA73B0 /* Main.storyboard */; };
 		53ED38FE25C5707400CA73B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53ED38FD25C5707400CA73B0 /* Assets.xcassets */; };
 		53ED390125C5707400CA73B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53ED38FF25C5707400CA73B0 /* LaunchScreen.storyboard */; };
+		53ED390A25C5789000CA73B0 /* InserableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED390925C5789000CA73B0 /* InserableTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		53ED38FD25C5707400CA73B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53ED390025C5707400CA73B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53ED390225C5707400CA73B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53ED390925C5789000CA73B0 /* InserableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InserableTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				53ED38F625C5707000CA73B0 /* SceneDelegate.swift */,
 				53ED38F825C5707000CA73B0 /* ViewController.swift */,
 				53ED38FA25C5707100CA73B0 /* Main.storyboard */,
+				53ED390925C5789000CA73B0 /* InserableTextField.swift */,
 				53ED38FD25C5707400CA73B0 /* Assets.xcassets */,
 				53ED38FF25C5707400CA73B0 /* LaunchScreen.storyboard */,
 				53ED390225C5707400CA73B0 /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53ED38F925C5707000CA73B0 /* ViewController.swift in Sources */,
+				53ED390A25C5789000CA73B0 /* InserableTextField.swift in Sources */,
 				53ED38F525C5707000CA73B0 /* AppDelegate.swift in Sources */,
 				53ED38F725C5707000CA73B0 /* SceneDelegate.swift in Sources */,
 			);
