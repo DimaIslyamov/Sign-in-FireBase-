@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var warnLable: UILabel!
     @IBOutlet weak var gmailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
 
     func atributesString() {
         let atributeString = NSAttributedString(string: "FORGOT PASSWORD ?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.underlineStyle: 1])
-        registerButton.setAttributedTitle(atributeString, for: .normal)
+        forgotPasswordButton.setAttributedTitle(atributeString, for: .normal)
     }
     
 }

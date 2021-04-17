@@ -1,0 +1,6 @@
+framework module Pods_Project_with_Scetch___SIGN_IN_MENU__ {
+  umbrella header "Pods-Project with Scetch ( SIGN IN MENU )-umbrella.h"
+
+  export *
+  module * { export * }
+}
