@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
             
         ref = Database.database().reference(withPath: "users")
-        atributesString()
         warnLable.alpha = 0
         
         Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
@@ -42,16 +41,14 @@ class LoginViewController: UIViewController {
     func displayWrnLable(withText text: String) {
         warnLable.text = text
         
-        UIView.animate(withDuration: 3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [.curveEaseInOut], animations: { [weak self] in
+        UIView.animate(withDuration: 3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1,
+                       options: [.curveEaseInOut],
+                       animations: { [weak self]
+                        in
             self?.warnLable.alpha = 1
         }) { [weak self] complete in
             self?.warnLable.alpha = 0
         }
-    }
-    
-    func atributesString() {
-        let atributeString = NSAttributedString(string: "FORGOT PASSWORD ?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.underlineStyle: 1])
-        forgotPasswordButton.setAttributedTitle(atributeString, for: .normal)
     }
     
     @IBAction func signinButtonAction(_ sender: UIButton) {
