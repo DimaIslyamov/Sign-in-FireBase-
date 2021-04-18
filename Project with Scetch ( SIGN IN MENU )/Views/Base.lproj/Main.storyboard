@@ -133,8 +133,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="qjI-0H-hZ2" id="xC4-w0-V7e"/>
                         <outlet property="forgotPasswordButton" destination="PJB-ic-8Id" id="Tbw-2S-7ih"/>
-                        <outlet property="gmailTextField" destination="qjI-0H-hZ2" id="xC4-w0-V7e"/>
                         <outlet property="passwordTextField" destination="feq-ic-nOL" id="aGq-If-VTX"/>
                         <outlet property="warnLable" destination="cm2-3M-gOR" id="3uS-He-MG1"/>
                         <segue destination="wSP-mK-r80" kind="presentation" identifier="taskSegue" modalPresentationStyle="fullScreen" id="D8M-y5-PCz"/>

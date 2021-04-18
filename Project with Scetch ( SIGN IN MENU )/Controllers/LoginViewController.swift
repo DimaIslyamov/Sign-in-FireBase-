@@ -11,15 +11,17 @@ import Firebase
 class LoginViewController: UIViewController {
 
     let segueIdentifier = "taskSegue"
+    var ref: DatabaseReference!
     
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var warnLable: UILabel!
-    @IBOutlet weak var gmailTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            
+        ref = Database.database().reference(withPath: "users")
         atributesString()
         warnLable.alpha = 0
         
@@ -33,7 +35,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        gmailTextField.text = ""
+        emailTextField.text = ""
         passwordTextField.text = ""
     }
     
@@ -53,15 +55,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signinButtonAction(_ sender: UIButton) {
-        guard let gmail = gmailTextField.text,
+        guard let email = emailTextField.text,
               let password = passwordTextField.text,
-                    gmail != "",
+              email != "",
                     password != "" else {
             displayWrnLable(withText: "Info is incorect")
             return
         }
         
-        Auth.auth().signIn(withEmail: gmail, password: password) { [weak self] (user, error)
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] (user, error)
             in
             if error != nil {
                 self?.displayWrnLable(withText: "Error occured")
@@ -78,24 +80,21 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerButtonAction(_ sender: UIButton) {
-        guard let gmail = gmailTextField.text,
+        guard let email = emailTextField.text,
               let password = passwordTextField.text,
-                    gmail != "",
+              email != "",
                     password != "" else {
             displayWrnLable(withText: "Info is incorect")
             return
         }
         
-        Auth.auth().createUser(withEmail: gmail, password: password) { (user, error) in
-            if error == nil {
-                if user != nil {
-                    
-                } else {
-                    print("user is not created")
-                }
-            } else {
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (authResult, error) in
+            guard error == nil, let user = authResult?.user else {
                 print(error!.localizedDescription)
+                return
             }
+            let userRef = self?.ref.child(user.uid)
+            userRef?.setValue(user.email, forKey: "email")
         }
     }
     
