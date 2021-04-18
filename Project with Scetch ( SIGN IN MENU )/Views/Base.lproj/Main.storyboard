@@ -51,7 +51,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.18783398370000001" green="0.2321013311" blue="0.30984295690000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYs-mm-V37">
                                 <rect key="frame" x="83" y="520" width="105" height="13"/>
@@ -71,7 +71,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signinButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SeJ-my-dYp"/>
-                                    <segue destination="wSP-mK-r80" kind="presentation" identifier="tasksSegue" modalPresentationStyle="fullScreen" id="sDJ-cS-rhc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJB-ic-8Id">
@@ -138,6 +137,7 @@
                         <outlet property="gmailTextField" destination="qjI-0H-hZ2" id="xC4-w0-V7e"/>
                         <outlet property="passwordTextField" destination="feq-ic-nOL" id="aGq-If-VTX"/>
                         <outlet property="warnLable" destination="cm2-3M-gOR" id="3uS-He-MG1"/>
+                        <segue destination="wSP-mK-r80" kind="presentation" identifier="taskSegue" modalPresentationStyle="fullScreen" id="D8M-y5-PCz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -182,6 +182,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="gER-RH-XtQ">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="CDb-Ct-DFM">
+                            <connections>
+                                <action selector="signOutTapped:" destination="VEH-ao-Wld" id="f0p-qu-9sS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Tp-WJ-QY8">
                             <connections>
                                 <action selector="addTasks:" destination="VEH-ao-Wld" id="dEn-mJ-LVg"/>

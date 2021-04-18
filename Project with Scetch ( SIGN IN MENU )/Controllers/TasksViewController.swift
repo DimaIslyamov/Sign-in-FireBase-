@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -27,5 +28,13 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-
+    @IBAction func signOutTapped(_ sender: UIBarButtonItem) {
+        do {
+        try Auth.auth().signOut()
+        } catch {
+            print(error.localizedDescription)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
