@@ -47,6 +47,11 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func atributesString() {
+        let atributeString = NSAttributedString(string: "FORGOT PASSWORD ?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.underlineStyle: 1])
+        forgotPasswordButton.setAttributedTitle(atributeString, for: .normal)
+    }
+    
     @IBAction func signinButtonAction(_ sender: UIButton) {
         guard let gmail = gmailTextField.text,
               let password = passwordTextField.text,
@@ -92,13 +97,6 @@ class LoginViewController: UIViewController {
                 print(error!.localizedDescription)
             }
         }
-    }
-    
-    
-
-    func atributesString() {
-        let atributeString = NSAttributedString(string: "FORGOT PASSWORD ?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.underlineStyle: 1])
-        forgotPasswordButton.setAttributedTitle(atributeString, for: .normal)
     }
     
 }

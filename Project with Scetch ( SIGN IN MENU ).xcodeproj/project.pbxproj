@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1C5F7920A752DD61D02B1F7F /* Pods_Project_with_Scetch___SIGN_IN_MENU__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99667E41A8D4D1942BBC0147 /* Pods_Project_with_Scetch___SIGN_IN_MENU__.framework */; };
 		5335D7D4262AD9BE004A1C8B /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335D7D3262AD9BE004A1C8B /* TasksViewController.swift */; };
+		534D14B2262C26BA00389FFE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534D14B1262C26BA00389FFE /* Task.swift */; };
+		534D14B5262C26C600389FFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534D14B4262C26C600389FFE /* User.swift */; };
 		536D607D262AF00600870833 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 536D607C262AF00600870833 /* GoogleService-Info.plist */; };
 		53ED38F525C5707000CA73B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED38F425C5707000CA73B0 /* AppDelegate.swift */; };
 		53ED38F725C5707000CA73B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED38F625C5707000CA73B0 /* SceneDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		2E4F4AF18BA9F96346ED6126 /* Pods-Project with Scetch ( SIGN IN MENU ).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project with Scetch ( SIGN IN MENU ).debug.xcconfig"; path = "Target Support Files/Pods-Project with Scetch ( SIGN IN MENU )/Pods-Project with Scetch ( SIGN IN MENU ).debug.xcconfig"; sourceTree = "<group>"; };
 		5335D7D3262AD9BE004A1C8B /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		534D14B1262C26BA00389FFE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		534D14B4262C26C600389FFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		536D607C262AF00600870833 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53ED38F125C5707000CA73B0 /* Project with Scetch ( SIGN IN MENU ).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project with Scetch ( SIGN IN MENU ).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53ED38F425C5707000CA73B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +36,7 @@
 		53ED390025C5707400CA73B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53ED390225C5707400CA73B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53ED390925C5789000CA73B0 /* InserableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InserableTextField.swift; sourceTree = "<group>"; };
-		99667E41A8D4D1942BBC0147 /* Pods_Project_with_Scetch___SIGN_IN_MENU__.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_with_Scetch___SIGN_IN_MENU__.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99667E41A8D4D1942BBC0147 /* Pods_Project_with_Scetch___SIGN_IN_MENU__.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Project_with_Scetch___SIGN_IN_MENU__.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A63D3034403FA0B4A62A706D /* Pods-Project with Scetch ( SIGN IN MENU ).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project with Scetch ( SIGN IN MENU ).release.xcconfig"; path = "Target Support Files/Pods-Project with Scetch ( SIGN IN MENU )/Pods-Project with Scetch ( SIGN IN MENU ).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				53ED390925C5789000CA73B0 /* InserableTextField.swift */,
+				534D14B1262C26BA00389FFE /* Task.swift */,
+				534D14B4262C26C600389FFE /* User.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -121,7 +127,6 @@
 				2E4F4AF18BA9F96346ED6126 /* Pods-Project with Scetch ( SIGN IN MENU ).debug.xcconfig */,
 				A63D3034403FA0B4A62A706D /* Pods-Project with Scetch ( SIGN IN MENU ).release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -252,7 +257,9 @@
 				53ED390A25C5789000CA73B0 /* InserableTextField.swift in Sources */,
 				5335D7D4262AD9BE004A1C8B /* TasksViewController.swift in Sources */,
 				53ED38F525C5707000CA73B0 /* AppDelegate.swift in Sources */,
+				534D14B2262C26BA00389FFE /* Task.swift in Sources */,
 				53ED38F725C5707000CA73B0 /* SceneDelegate.swift in Sources */,
+				534D14B5262C26C600389FFE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
